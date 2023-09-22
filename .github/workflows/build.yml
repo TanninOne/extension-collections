@@ -37,7 +37,7 @@ jobs:
         path: './dist/*'
     - uses: actions/upload-artifact@v3
       with:
-        name: ${{ env.name }}
+        name: ${{ env.archivename }}
         path: ${{ github.workspace }}/${{ env.archivename }}.zip
     - name: Release
       uses: softprops/action-gh-release@v1

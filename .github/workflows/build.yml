@@ -29,13 +29,6 @@ jobs:
         npm install
         npm run build
 
-    - name: Archive Release
-      if: false
-      uses: thedoctor0/zip-release@main
-      with:
-        type: 'zip'
-        filename: ${{ env.archivename }}.zip
-        path: './dist/*'
     - uses: actions/upload-artifact@v3
       with:
         name: ${{ env.archivename }}
